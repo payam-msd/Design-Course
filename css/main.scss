@@ -1,0 +1,65 @@
+body {
+  font-family: "operator mono";
+  padding: 8em;
+}
+
+h1 {
+  font-size: 5em;
+  width: 35%;
+  color: red;
+  line-height: 1em;
+}
+
+button {
+  background: transparent;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 100px;
+  font-family: "operator SSm Book";
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  &:hover {
+    background: hsla(0, 100%, 48%, 0.171);
+  }
+}
+
+.panel {
+  position: absolute;
+  width: 55%;
+  bottom: 0; // need to set it 0 for transform from bottom
+  right: 0;
+  background: #ffb7b7;
+  box-sizing: border-box;
+  padding: 15% 7%;
+  transform: scaleY(0); // set to 0 and in Tween max we change it !
+  transform-origin: bottom; //coz we want it to start in bottom !
+
+  img {
+    width: 250px;
+    float: left;
+    margin-right: 40px;
+    opacity: 0; // need to be 0 (invisible) and in Tween max we make it visible
+    transform: translateY(
+      -200px
+    ); // img gonna come from above so -200 make it beautifully natural
+  }
+
+  p {
+    font-size: 1.2em;
+    width: 80%;
+    opacity: 0;
+  }
+
+  .box {
+    border: 5px solid rgba(255, 255, 255, 0.658);
+    width: 75%;
+    height: 55%;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0);
+  }
+}

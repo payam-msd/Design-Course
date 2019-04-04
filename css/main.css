@@ -1,0 +1,70 @@
+body {
+  font-family: "operator mono";
+  padding: 8em;
+}
+
+h1 {
+  font-size: 5em;
+  width: 35%;
+  color: red;
+  line-height: 1em;
+}
+
+button {
+  background: transparent;
+  border: 1px solid red;
+  border-radius: 100px;
+  font-family: "operator SSm Book";
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(245, 0, 0, 0.171);
+}
+
+.panel {
+  position: absolute;
+  width: 55%;
+  bottom: 0;
+  right: 0;
+  background: #ffb7b7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15% 7%;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.panel img {
+  width: 250px;
+  float: left;
+  margin-right: 40px;
+  opacity: 0;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+}
+
+.panel p {
+  font-size: 1.2em;
+  width: 80%;
+  opacity: 0;
+}
+
+.panel .box {
+  border: 5px solid rgba(255, 255, 255, 0.658);
+  width: 75%;
+  height: 55%;
+  position: absolute;
+  left: 10%;
+  top: 25%;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+/*# sourceMappingURL=main.css.map */

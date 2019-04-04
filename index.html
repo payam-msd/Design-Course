@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>GSAP</title>
+  </head>
+  <body>
+    <h1>Test For GASP</h1>
+    <button id="cta">Run Here</button>
+
+    <div class="panel">
+      <img
+        src="images/iconfinder_CONSTRUCTION_TOOL_TOOLS_WORK_HAMMER_PAINT_BUILDING-07_3098128.svg"
+        id="light"
+      />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit,
+        officia.
+      </p>
+      <div class="box"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <script>
+      document.getElementById("cta").addEventListener("click", function() {
+        TweenMax.to(".panel", 1.5, {
+          scaleY: 1,
+          height: "100vh",
+          ease: Circ.easeOut
+        });
+        TweenMax.to("#light", 1, {
+          delay: 1.5,
+          opacity: 1,
+          y: 0,
+          ease: Back.easeOut.config(1.7)
+        });
+        TweenMax.to("p", 1, { y: 20, delay: 1.5, opacity: 1 });
+        TweenMax.to(".box", 3, {
+          opacity: 1,
+          scale: 1,
+          ease: Elastic.easeOut.config(1, 0.3)
+        });
+      });
+    </script>
+  </body>
+</html>
